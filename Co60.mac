@@ -1,0 +1,27 @@
+/control/verbose 0
+/run/verbose 0
+#
+#/gun/particle ion
+#/gun/ion 63 89
+#
+#/UraniumEff/fullChain true
+#
+/gps/particle gamma
+/gps/pos/confine Source
+/gps/ang/type iso
+/gps/energy 121.7817 keV
+
+/tracking/verbose 0
+#
+/analysis/setFileName Co60
+/analysis/h1/set 1  100  0. 4000 keV	#e+ e-
+/analysis/h1/set 2  100  0. 4000 keV	#neutrino
+/analysis/h1/set 3  8192  0. 2.048 MeV	#gamma
+/analysis/h1/set 4  100  0. 10   MeV	#alpha
+/analysis/h1/set 5  100  0. 200  keV	#recoil ion
+/analysis/h1/set 6  100  0  8    MeV	#EkinTot (Q)
+/analysis/h1/set 7  100  0. 300  MeV	#P balance
+/analysis/h1/set 8  100  0. 1.e+11 y	#time of life
+/analysis/h1/set 9  8192  0. 2.048 MeV	#absoEdep
+#  
+/run/beamOn 1000
